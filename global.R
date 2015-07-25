@@ -1,0 +1,37 @@
+load("data/ESS.Rdata")
+
+countries <- unique(ESS.data$country)
+names(countries) <- c(
+  "Austria",
+  "Belgium",
+  "Bulgaria",
+  "Switzerland",
+  "Cyprus",
+  "Czech Republic",
+  "Germany",
+  "Denmark",
+  "Estonia",
+  "Spain",
+  "Finland",
+  "France",
+  "United Kingdom",
+  "Greece",
+  "Croatia",
+  "Hungary",
+  "Ireland",
+  "Israel",
+  "Iceland",
+  "Italy",
+  "Lithuania",
+  "Luxembourg",
+  "Netherlands",
+  "Norway",
+  "Poland",
+  "Portugal",
+  "Russia",
+  "Sweden",
+  "Slovenia",
+  "Slovakia",
+  "Turkey",
+  "Ukraine"
+)
