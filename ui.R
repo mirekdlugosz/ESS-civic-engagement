@@ -30,10 +30,14 @@ yearPlotUi <- sidebarLayout(
 )
 
 shinyUI(fluidPage(
-
-  # Application title
-  titlePanel("Civic engagement in Poland"), 
-  selectInput("country", NULL, countries, selected = "PL"),
+  tags$head(
+    tags$link(rel = "stylesheet", type = "text/css", href = "style.css")
+  ),
+  title = "Civic engagement in Europe",
+  tags$div(class="container", id="heading",
+    h1("Civic engagement in"),
+           selectInput("country", NULL, countries, selected = "PL")
+  ),
   navbarPage(NULL,
              tabPanel("Overview",
                       overviewPlotUI
@@ -45,6 +49,9 @@ shinyUI(fluidPage(
   
   hr(),
 
-  includeMarkdown("./description.md")
+  includeMarkdown("./description.md"),
+  
+  singleton(tags$script(type="text/javascript", 
+                        src="js/parse_input.js")) 
   
 ))
