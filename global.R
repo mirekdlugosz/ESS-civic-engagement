@@ -1,6 +1,7 @@
 load("data/ESS.Rdata")
 
 countries <- unique(ESS.data$country)
+# Make countries list display natural language names
 names(countries) <- c(
   "Austria",
   "Belgium",
@@ -35,3 +36,5 @@ names(countries) <- c(
   "Turkey",
   "Ukraine"
 )
+# Sort list so they appear in alphabetical order of natural language names
+countries <- countries[sort(names(countries))]
