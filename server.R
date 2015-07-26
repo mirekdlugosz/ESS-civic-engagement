@@ -5,7 +5,6 @@ library("RColorBrewer")
 colors <- rev(brewer.pal(8, "YlOrBr"))
 
 nearest.multiple <- function(x, multiple) {
-  #multiple * as.integer(x %/% multiple + round((x %% multiple )/multiple))
   ceiling(x / multiple) * multiple
 }
 
