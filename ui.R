@@ -16,6 +16,8 @@
 
 
 library("shiny")
+library("markdown")
+options(markdown.HTML.options = NULL)
 
 plotHeight <- "400px"
 
