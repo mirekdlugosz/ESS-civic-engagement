@@ -46,7 +46,7 @@ Source of data: European Social Survey Cumulative File, ESS 1-5 (2012). Data fil
 
 # About
 
-Created by [Mirosław Zalewski](http://FIXME.invalid).
+Created by [Mirosław Zalewski](http://miroslaw-zalewski.eu).
 
 Licensed under GNU AGPL 3.0 or later (see COPYING file for details).
 
