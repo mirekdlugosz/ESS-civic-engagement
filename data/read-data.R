@@ -7,17 +7,15 @@ columns <- match(c("contplt", "wrkprty", "wrkorg", "badge",
 count.year <- function(x) {
   # count number of 1's ("yes"'s) in each row
   x$sum <- apply(x[, columns] == 1, 1, sum)
-  # compute summary table for each value of scale, i.e.
+  # compute weighted summary table for each value of scale, i.e.
   # how many people had 0 "yes", how many had 1 "yes" etc
-  # `[-9]` is to drop any NAs that might appear
-  count <- summary(factor(x$sum, levels = 0:7))[-9]
-  
+  count <- tapply(x$pspwght, x$sum, sum)
   data.frame(country=x[1, "cntry"], 
              # overly clever way to translate "1" to 2002, "2" to 2004 etc.
              year=2000 + 2*x[1, "essround"], 
              scale.value=names(count), 
              number=count, 
-             percent=count/sum(count)*100,
+             percent=round(count/sum(count)*100, 3),
              stringsAsFactors = FALSE)
 }
 
@@ -26,8 +24,12 @@ count.country <- function(x) {
     by(x, x$essround, count.year))
 }
 
-ESS.data <- do.call("rbind", 
-                    by(ESS.all, ESS.all$cntry, count.country))
+count.all <- function(x) {
+  do.call("rbind", 
+          by(x, x$cntry, count.country))
+}
+
+ESS.data <- count.all(ESS.all)
 
 save(ESS.data, file="data/ESS.Rdata")
 
