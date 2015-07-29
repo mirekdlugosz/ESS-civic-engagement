@@ -60,7 +60,7 @@ shinyUI(fluidPage(
              tabPanel("Overview",
                       overviewPlotUI
                       ),
-             tabPanel("Explore data on year basis",
+             tabPanel("Explore data on yearly basis",
                       yearPlotUi
                       )
   ),
