@@ -1,5 +1,4 @@
 library("shiny")
-library("markdown")
 
 plotHeight <- "400px"
 
@@ -49,7 +48,9 @@ shinyUI(fluidPage(
   
   hr(),
 
-  includeMarkdown("./description.md"),
+  div(id="description",
+    includeMarkdown("./description.md")
+  ),
   
   singleton(tags$script(type="text/javascript", 
                         src="js/parse_input.js")) 

@@ -5,3 +5,8 @@
 #heading {
 	padding-left: 30px;
 }
+
+#description td,
+#description th {
+	padding: 0.2em 0.8em;
+}
