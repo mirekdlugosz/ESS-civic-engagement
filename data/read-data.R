@@ -25,7 +25,8 @@ count.year <- function(x) {
   x$sum <- apply(x[, columns] == 1, 1, sum)
   # compute weighted summary table for each value of scale, i.e.
   # how many people had 0 "yes", how many had 1 "yes" etc
-  count <- tapply(x$pspwght, x$sum, sum)
+  count <- tapply(x$pspwght, factor(x$sum, levels=0:7), sum)
+  count[is.na(count)] <- 0
   data.frame(country=x[1, "cntry"], 
              # overly clever way to translate "1" to 2002, "2" to 2004 etc.
              year=2000 + 2*x[1, "essround"], 
@@ -50,4 +51,4 @@ ESS.data <- count.all(ESS.all)
 save(ESS.data, file="data/ESS.Rdata")
 
 # Avoid pollution of global namespace when run from RStudio
-rm(ESS.all, ESS.data, columns, count.country, count.year)
+rm(ESS.all, ESS.data, columns, count.all, count.country, count.year)
