@@ -42,7 +42,7 @@ Depending on local context, some questions could be more important than others. 
 
 Higher values are generally more desirable, as they show that people feel they can influence social environment they live in. That feeling is the first step on the road to actual change.
 
-Source of data: European Social Survey Cumulative File, ESS 1-5 (2012). Data file edition 1.0. Norwegian Social Science Data Services, Norway - Data Archive and distributor of ESS data. 
+Source of data: European Social Survey Cumulative File, ESS 1-6 (2014). Data file edition 1.0. Norwegian Social Science Data Services, Norway - Data Archive and distributor of ESS data.
 
 # About
 

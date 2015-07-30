@@ -18,12 +18,13 @@ consider splitting each country into separate file.
 `ESS-full-data.zip` is file provided by ESS download wizard. It contains
 all source data (answers for selected questions in all countries in all
 waves + some metadata, most importantly weights) and codebook. This file
-is covered by standard ESS license: you can distribute it, you can't use
-it for for-profit purposes, you must cite it, you can't try to hold ESS CST
+is covered by standard ESS conditions of use: you can distribute it, you can't 
+use it for for-profit purposes, you must cite it, you can't try to hold ESS CST
 responsible for any decisions and interpretations made and you must register
-your usage in ESS on-line bibliography database.
-Data citation:
+your usage in ESS on-line bibliography database; read full conditions on
+[ESS website](http://www.europeansocialsurvey.org/data/conditions_of_use.html).
 
-European Social Survey Cumulative File, ESS 1-5 (2012). Data file edition 1.0.
-Norwegian Social Science Data Services, Norway - Data Archive and distributor
+Data citation:
+European Social Survey Cumulative File, ESS 1-6 (2014). Data file edition 1.0. 
+Norwegian Social Science Data Services, Norway - Data Archive and distributor 
 of ESS data.
