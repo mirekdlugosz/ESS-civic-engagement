@@ -15,6 +15,7 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 library("shiny")
+library("dichromat")
 library("ggplot2")
 library("RColorBrewer")
 
