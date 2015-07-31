@@ -66,10 +66,10 @@ shinyUI(fluidPage(
   ),
   
   hr(),
-
-  div(id="description",
-    includeMarkdown("./description.md")
-  ),
+  fluidRow(column(width = 10, offset = 1,
+                  div(id="description",
+                      includeMarkdown("./description.md")
+                  ))),
   
   singleton(tags$script(type="text/javascript", 
                         src="js/parse_input.js")) 
