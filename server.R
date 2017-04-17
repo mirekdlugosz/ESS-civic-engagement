@@ -28,14 +28,14 @@ nearest.multiple <- function(x, multiple) {
 makeOverviewPlot <- function(data.subset) {
   p <- ggplot(data.subset) + 
     geom_bar(stat="identity", 
-             aes(x=as.factor(year), y=percent, fill=scale.value, 
-                 order=rev(scale.value))) +
+             aes(x=as.factor(year), y=percent, fill=scale.value)) +
     theme_minimal() +
     theme(legend.position = "bottom", axis.ticks.x = element_blank() ) +
     labs(x="Year", y="Percent") +
     guides(fill = guide_legend(title.position="top",
                                title="Engagement index (higher is better)",
-                               title.hjust=0.5)) +
+                               title.hjust=0.5,
+                               nrow=1, byrow=TRUE)) +
     scale_fill_manual(values = colors)
   return(p)
 }
